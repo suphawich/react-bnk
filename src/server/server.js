@@ -55,7 +55,7 @@ app.get('/api/hello', (req, res) => {
     let title = "not found"
 
     header = $('.shopee-product-info__header__text').text()
-    monthlySales = $('.shopee-product-info__header__sold-count').text()
+    monthlySales = $('.shopee-product-info__header__sold-count').text().substring(16)
     res.send({header: header, monthlySales: monthlySales})
     // console.log(content);
    
